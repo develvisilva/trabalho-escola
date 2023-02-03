@@ -15,9 +15,9 @@ def dimensoesObjeto():
                 return 10.00
             elif(x >=1000) and (x < 10000):
                 return 20.00
-            elif(x >=9999) and (x < 30000):
+            elif(x >=10001) and (x < 30000):
                 return 30.00
-            elif(x >=29999) and (x < 100000):
+            elif(x >=30001) and (x < 100000):
                 return 50.00
             else:
                 print('Não aceitamos objetos com dimensões tão grandes!')
