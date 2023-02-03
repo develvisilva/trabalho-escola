@@ -26,7 +26,6 @@ def dimensoesObjeto():
         except ValueError:
             print('Você digitou peso do objeto com valor não numérico!')
 
-
 #Entrada com peso da carga
 def pesoObjeto():
     while True:
