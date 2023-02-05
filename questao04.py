@@ -87,5 +87,55 @@ def consultarProduto() -> None: #FUNÇÃO PARA CONSULTA DE PRODUTOS
             #EXIBE O MENU DE CONSULTA
             if exibir_menu:
                 print('\nVocê selecionou a opção Consultar Produtos\n')
-                print()
+                print(f"{'Consultar Produtos':-^30s}")
+                FUN_menu(menu_da_mercearia[2][1])
+            opcao = int(input('Escolha a opção desejada:'))
+            
+            #OPÇÃO 1 - CONSULTAR TODOS OS PRODUTOS
+            if opcao == 1:
+                #LISTA TODOS OS PRODUTOS CADASTRADOS, SE HOUVER
+                if len(produtos) > 0:
+                    print("\nTodos os produtos cadastrados:\n")
+                    
+                    print('-' * len_cabecalho)
+                    print(cabecalho)
+                    print('-' * len_cabecalho)
+                    
+                    for key, val in produtos.items():
+                        print(f"| {key:<10} | {val[0]:<25} | {val[1]:<20} | {val[2]:>10.2f} |")
+                    print('-' * len_cabecalho)
+                else:
+                    print('\nNão existem produtos cadastrados!\n')
+                print('')
+                
+            #OPÇÃO 2 - CONSULTAR PRODUTOS POR CÓDIGO
+            elif opcao == 2:
+                while True:
+                    try:
+                        codigo = int(input('\nDigite o código do produto a ser consultado.\n'))    
+                        
+                        #EXIBE O PRODUTO COM SEU RESPECTIVO CÓDIGO, SE HOUVER
+                        if codigo in produtos.keys():
+                            print("-" * len_cabecalho)
+                            print(cabecalho)
+                            print("-" * len_cabecalho)
+                            print(f"| {codigo:<10} | {produtos[codigo][0]:<25} | {produtos[codigo][1]:<20} | {produtos[codigo][2]:>10.2f} |")
+                            print('-' * len_cabecalho)
+                        else:
+                            print('\nNão existe produto com esse código.\n')
+                            break
+                    except ValueError:
+                        print('\nDigite um código válido\n')
+            #OPÇÃO 3 - CONSULTAR PRODUTOS POR FABRICANTE
+            elif opcao == 3:
+                while True:
+                    try:
+                        fabricante = input('\nDigite o fabricante do produto a ser consultado:\n')
+                        #VARIÁVEL USADA PARA CONTROLAR A EXIBIÇÃO DO CABEÇALHO DA LISTA
+                        exibir_produto = False
+                        
+                        for key
+                           
+                            
+                            
 
