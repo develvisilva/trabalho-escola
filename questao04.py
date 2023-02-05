@@ -134,8 +134,47 @@ def consultarProduto() -> None: #FUNÇÃO PARA CONSULTA DE PRODUTOS
                         #VARIÁVEL USADA PARA CONTROLAR A EXIBIÇÃO DO CABEÇALHO DA LISTA
                         exibir_produto = False
                         
-                        for key
-                           
+                        for key, val in produtos.items():
+                            #IMPRIME OS DADOS DO PRODUTO DO FABRICANTE INFORMADO
+                            if val[1].upper() == fabricante.upper():
+                                if not existe_produto:
+                                    print("-" * len_cabecalho)
+                                    print(cabecalho)
+                                    print("-" * len_cabecalho)
+                            print(f"| {key:<10} | {val[0]:<25} | {val[1]:<20} | {val[2]:>10.2f} |")
+                            existe_produto = True
+                        if not existe_produto:
+                            print('\nNão existe produto com esse fabricante!\n')
+                        else:
+                            print('-' * len_cabecalho)
+                        break
+                    except ValueError:
+                        print('Digite um fabricante válido.')
+            elif opcao == 4:
+                break
+            else:
+                print('\nAtenção! Você digitou uma opção inválida!\n')
+                exibir_menu: True
+        except ValueError:
+                print('\nAtenção! Você digitou uma opção inválida!\n')
+                exibir_menu: False
+produtos = {}
+
+while True:
+    opcao_selecionada = mostrar_menu
+    
+    if opcao_selecionada == 1:
+        cod_produtos = len(produtos) + 1
+        cadastrarProduto(cod_produtos)
+        
+    elif opcao_selecionada == 2:
+        consultarProduto()
+        
+    elif opcao_selecionada == 3:
+        removerProduto
+    
+    else:
+        break                           
                             
                             
 
