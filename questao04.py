@@ -75,5 +75,17 @@ def removerProduto() -> None: #FUNÇÃO QUE REMOVE PRODUTOS
         except ValueError:
             print('\nALERTA!!! Digite um código válido!\n')
             
+def consultarProduto() -> None: #FUNÇÃO PARA CONSULTA DE PRODUTOS
+    #VARIÁVEL USADA PARA CONTROLAR A EXIBIÇÃO DO MENU DE CONSULTA
+    exibir_menu = True
     
+    cabecalho = f"| {'Código':<10} | {'Nome':<25} | {'Fabricante':<20} | {'Valor (R$)':>10} |" 
+    len_cabecalho = len(cabecalho)
+    
+    while True:
+        try:
+            #EXIBE O MENU DE CONSULTA
+            if exibir_menu:
+                print('\nVocê selecionou a opção Consultar Produtos\n')
+                print()
 
