@@ -1,14 +1,14 @@
 print('Bem vindo(a) a loja do Elvis Silva') #identificador pessoal
 # OPÇÃO DO MENU, CADA NÚMERO RECEBE UMA DESCRIÇÃO
 menu_da_mercearia {
-    1: 'Cadastrar Produto'
+    1: 'Cadastrar Produto',
     2: ['Consultar Produto', {
         1: 'Consultar Todos os Produtos',
         2: 'Consultar Produtos por Código',
         3: 'Consultar Produto(s) por Fabricante',
         4: 'Retornar',
     }],
-    3: 'Remover Produto'
+    3: 'Remover Produto',
     4: 'Sair'
 }
 
