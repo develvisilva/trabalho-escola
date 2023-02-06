@@ -1,5 +1,5 @@
 #QUESTÃO 04 DE 04
-print(f"Bem-vindo a loja do {'Elvis Silva'}\n")
+print(f"Bem-vindo(a) a loja do {'Elvis Silva'}\n")
 # OPÇÕES DO MENU, CADA NUMERO RECEBE UMA DESCRIÇÃO
 menu_da_mercearia = {
     1: 'Cadastrar Produto',
@@ -12,7 +12,6 @@ menu_da_mercearia = {
     3: 'Remover Produto',
     4: 'Sair'
 }
-
 
 def FUN_menu(menu: dict) -> None:  #FUNÇÃO QUE IRÁ IMPRIMIR AS OPÇÕES DE MENU
 
