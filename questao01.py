@@ -1,16 +1,15 @@
-
-#Questão 01 de 04
+#QUESTÃO 01 DE 04
 print('Bem vindo(a) a Loja do Elvis Silva')
 
-#inserir valor de cada produto
+#INSERIR VALOR DE CADA PRODUTO
 valor_unitario = float(input('Entre com o valor do produto:'))
 
-#inserir valor da quantidade
+#INSERIR VALOR DA QUANTIDADE
 quantidade = int(input('Entre com o valor da quantidade:'))
 
-valor_frete = 0 #variavel que receberá o valor do frete conforme quantidade de produtos
+valor_frete = 0 #VARIAVEL QUE RECEBERÁ O VALOR DO FRETE CONFORME QUANTIDADE DE PRODUTOS
 
-#logica de desconto conforme quantidade
+#LOGICA DE DESCONTO CONFORME QUANTIDADE
 
 if 0 <= quantidade < 10:
     valor_frete = 0
@@ -21,13 +20,14 @@ elif 100 <= quantidade < 1000:
 else:
     valor_frete = 15
 
-valor_parcial = float(valor_unitario * quantidade)#calcula valor unitário x quantidade
+valor_parcial = float(valor_unitario * quantidade)#CALCULAR VALOR UNITÁRIO X QUANTIDADE
 
-valor_porcentagem =float(valor_parcial * valor_frete / 100)#calcula porcentagem por quantidade
+valor_porcentagem =float(valor_parcial * valor_frete / 100)#CALCULA PORCENTAGEM POR QUANTIDADE
 
-valor_desconto = float(valor_parcial - valor_porcentagem)#calcula desconto conforme quantidade
+valor_desconto = float(valor_parcial - valor_porcentagem)#CALCULA DESCONTO CONFORME QUANTIDADE
 
-print('O valor sem desconto foi: R${:.2f}' .format(valor_parcial)) #irá imprimir o valor sem desconto
+print('O valor sem desconto foi: R${:.2f}' .format(valor_parcial))#IRÁ IMPRIMIR O VALOR SEM DESCONTO
 
 print('O valor com desconto foi: R$ {:.2f}' .format(valor_desconto) + ' ''(desconto {}%)'.format(valor_frete))
-#mostrará valor com desconto e a porcentagem conforme quantidade
+#MOSTRARÁ VALOR COM DESCONTO E A PORCENTAGEM CONFORME QUANTIDADE
+

@@ -1,6 +1,7 @@
+#QUESTÃO 04 DE 04
 print('Bem vindo(a) a loja do Elvis Silva') #identificador pessoal
 # OPÇÃO DO MENU, CADA NÚMERO RECEBE UMA DESCRIÇÃO
-menu_da_mercearia {
+menu_da_mercearia = {
     1: 'Cadastrar Produto',
     2: ['Consultar Produto', {
         1: 'Consultar Todos os Produtos',
@@ -20,7 +21,7 @@ def FUN_menu(menu: dict) -> None: #FUNÇÃO QUE IMPRIME AS OPÇÕES DOS MENUS
 
 def mostrar_menu(menu: dict) -> int: #FUNÇÃO QUE IMPRIME E VALIDA A OPÇÃO MENU
     print(f"\n{'Menu Principal':-^30s}")
-    fUN_menu(menu)
+    FUN_menu(menu)
     
     while True:
         try:
@@ -32,7 +33,7 @@ def mostrar_menu(menu: dict) -> int: #FUNÇÃO QUE IMPRIME E VALIDA A OPÇÃO ME
                 break
             else:
                 print('\nOpção inválida!\n')
-        except ValuError:
+        except ValueError:
             print('\nOpção inválida!')
     return opcao
 
@@ -56,9 +57,9 @@ def cadastrarProduto(codigo: int) -> None: #FUNÇÃO QUE CADASTRA PRODUTOS
             print('\nALERTA!!! Digite um número válido!\n')
     
     produtos[codigo] = []
-    produtos[].append(nome)
-    produtos[].append(fabricante)
-    produtos[].append(valor)
+    produtos[codigo].append(nome)
+    produtos[codigo].append(fabricante)
+    produtos[codigo].append(valor)
 
 def removerProduto() -> None: #FUNÇÃO QUE REMOVE PRODUTOS
     while True:

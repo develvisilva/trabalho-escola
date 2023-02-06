@@ -1,8 +1,9 @@
+#QUESTÃO 03 DE 04
 print('Bem Vindo(a) a Companhia de Logística Elvis Silva S.A.')
 
 pedido = True
 
-# #Entrada de dimensão da carga
+#ENTRADA COM DIMENSÃO DA CARGA
 def dimensoesObjeto():
     while True:
         try:
@@ -26,7 +27,7 @@ def dimensoesObjeto():
         except ValueError:
             print('Você digitou peso do objeto com valor não numérico!')
 
-#Entrada com peso da carga
+#ENTRADA COM PESO DA CARGA
 def pesoObjeto():
     while True:
         try:
@@ -46,7 +47,7 @@ def pesoObjeto():
         except ValueError:
             print('Você digitou peso do objeto com valor não numérico \nPor favor entre com o peso desejado novamente!')
             continue
-#Opção de rota com seus valores
+#OPÇÃO DE ROTA COM SEUS RESPECTIVOS VALORES
 def rotaObjeto():
     while True:
         try:

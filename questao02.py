@@ -1,4 +1,4 @@
-#Questão 02 de 04
+#QUESTÃO 02 DE 04
 print('Bem Vindo(a) a Lachonete de Elvis Silva')
 print('----------------Cardápio---------------')
 
@@ -16,6 +16,8 @@ pedido = True
 resposta = ''
 codigo = 0
 total = 0
+
+#LÓGICA DO PEDIDO
 
 while pedido == True:
         codigo = input('Informe um código de acordo com a tabela:')
