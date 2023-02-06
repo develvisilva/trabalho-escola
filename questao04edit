@@ -14,13 +14,11 @@ menu_da_mercearia = {
 }
 
 def FUN_menu(menu: dict) -> None:  #FUNÇÃO QUE IRÁ IMPRIMIR AS OPÇÕES DE MENU
-
     for key, val in menu.items():
         print(f"{key} - {val if type(val) == str else val[0]}")
     print('-' * 30)
 
 def mostrar_menu(menu: dict) -> int:  #FUNÇÃO QUE IMPRIME E VALIDA A OPÇÃO DO MENU
-
     print(f"\n{'Menu Principal':-^30s}")
     FUN_menu(menu)
     while True:
@@ -37,12 +35,10 @@ def mostrar_menu(menu: dict) -> int:  #FUNÇÃO QUE IMPRIME E VALIDA A OPÇÃO D
     return opcao
 
 def cadastrarProduto(codigo: int) -> None:  #FUNÇÃO NA QUAL CADASTRA OS PRODUTOS
-
     print("\nOpção Cadastrar Produto\n")
     print("Código da Produto {:>03}".format(codigo))
     nome = input("Digite o nome do produto: ").strip()
     fabricante = input("Digite o fabricante do produto: ").strip()
-
     while True:
         try:
             valor = float(input("Digite o valor (R$) do produto: "))
@@ -60,7 +56,6 @@ def cadastrarProduto(codigo: int) -> None:  #FUNÇÃO NA QUAL CADASTRA OS PRODUT
     produtos[codigo].append(valor)
 
 def removerProduto() -> None:  #FUNÇÃO QUE REMOVE OS PRODUTOS
-
     while True:
         try:
             codigo = int(input("\nEscreva o código do produto a ser removido: "))
@@ -75,12 +70,10 @@ def removerProduto() -> None:  #FUNÇÃO QUE REMOVE OS PRODUTOS
             print("\nALERTA!!!! Digite um código válido.\n")
 
 def consultarProduto() -> None:  #FUNÇÃO PARA CONSULTA DE PRODUTOS
-
     #VARIÁVEL USADA PARA CONTROLAR A EXIBIÇÃO DO MENU DE CONSULTA
     exibir_menu = True
     cabecalho = f"| {'Código':<10} | {'Nome':<25} | {'Fabricante':<20} | {'Valor (R$)':>10} |"
     len_cabecalho = len(cabecalho)
-
     while True:
         try:
             #EXIBE O MENU DE CONSULTA
@@ -96,7 +89,6 @@ def consultarProduto() -> None:  #FUNÇÃO PARA CONSULTA DE PRODUTOS
                 #LISTA DE TODOS OS PRODUTOS CADASTRADOS, SE HOUVER
                 if len(produtos) > 0:
                     print("\nTodos os produtos cadastrados:\n")
-
                     print("-" * len_cabecalho)
                     print(cabecalho)
                     print("-" * len_cabecalho)
@@ -105,7 +97,6 @@ def consultarProduto() -> None:  #FUNÇÃO PARA CONSULTA DE PRODUTOS
                     print("-" * len_cabecalho)
                 else:
                     print("\nNão existem produtos cadastradas.")
-
                 print("")
 
             #OPÇÃO 2 - CONSULTAR PRODUTO POR CÓDIGO
