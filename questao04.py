@@ -1,5 +1,5 @@
 #QUESTÃO 04 DE 04
-print('Bem vindo(a) a loja do Elvis Silva') #identificador pessoal
+print('Bem vindo(a) a loja do Elvis Silva')
 # OPÇÃO DO MENU, CADA NÚMERO RECEBE UMA DESCRIÇÃO
 menu_da_mercearia = {
     1: 'Cadastrar Produto',
@@ -68,7 +68,7 @@ def removerProduto() -> None: #FUNÇÃO QUE REMOVE PRODUTOS
             
             #VERIFICA SE EXISTE O PRODUTO COM O CÓDIGO INFORMADO
             # SE SIM, REMOVE O PRODUTO DO DICIONÁRIO
-            if codigo not in produto.keys():
+            if codigo not in produtos.keys():
                 print('\nNenhum produto possui esse código.')
             else:
                 produtos.pop(codigo)
